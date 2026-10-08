@@ -1,5 +1,5 @@
 const express = require("express");
-const loadData = require("./public/script.js");
+const loadData = require("./public/javascript/script.js");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -41,10 +41,8 @@ async function loadPage(req, res, sheet_id, sheet_gid, salut){
             sheet_id,
             sheet_gid
         );
-
         console.log(data);
-
-        res.render("pagini/note_elev", {
+        res.render("pagini/pagina_elev", {
             alldata: data,
             salut: salut
         });
