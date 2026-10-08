@@ -41,7 +41,6 @@ async function loadPage(req, res, sheet_id, sheet_gid, salut){
             sheet_id,
             sheet_gid
         );
-        console.log(data);
         res.render("pagini/pagina_elev", {
             alldata: data,
             salut: salut
