@@ -84,6 +84,13 @@ app.get(["/luca", "/Luca"], passwordProtection, async (req, res) => {
         salut="Salut, Luca"
     );
 });
+app.get(["/alex", "/Alex"], passwordProtection, async (req, res) => {
+    await loadPage(req, res, 
+        sheet_id="17KUy_IFG38um8PD4F-_tDcMguhRe9ghpR5ZLvc6d44w",
+        sheet_gid="0",
+        salut="Salut, Alex"
+    );
+});
 
 app.get(["/"], async (req, res) => {
     res.render("pagini/index");
