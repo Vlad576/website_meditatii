@@ -91,6 +91,13 @@ app.get(["/alex", "/Alex"], passwordProtection, async (req, res) => {
         salut="Salut, Alex"
     );
 });
+app.get(["/matei", "/Matei"], passwordProtection, async (req, res) => {
+    await loadPage(req, res, 
+        sheet_id="1_6PkE_TIrqK8XBSsDZeRr1XQFt9-UKPYhcna8BcIzFQ",
+        sheet_gid="0",
+        salut="Salut, Matei"
+    );
+});
 
 app.get(["/"], async (req, res) => {
     res.render("pagini/index");
